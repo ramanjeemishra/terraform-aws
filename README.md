@@ -19,11 +19,11 @@ This project create following Infrastructure components in provided regions
 
 #### To Run the project
 ##### Setup following Environment variables
-- `` aws_access_key_id``
+- ``aws_access_key_id``
 - ``aws_secret_access_key``
 - ``export TF_VAR_db_password=<<DB_PASSWORD>>``
 #### Run following commands
-<b>Variables will be read from <code>terraform.tfvars</code>
+*Variables will be read from ``terraform.tfvars``*
 - ``terraform init``
 - ``terraform plan`` or ``terraform plan -var-file terraform.tfvars``
 - ``terraform apply`` or ``terraform apply -var-file terraform.tfvars``
