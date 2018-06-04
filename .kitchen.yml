@@ -1,0 +1,73 @@
+# ---
+# driver:
+#   name: terraform
+#   root_module_directory: test/fixtures/tf_module
+#   parallelism: 4
+#
+# provisioner:
+#   name: terraform
+#
+# transport:
+#   name: ssh
+#
+# verifier:
+#   name: terraform
+#   groups:
+#     - name: basic
+#       controls:
+#         - file_check
+#
+# platforms:
+#   - name: terraform
+#
+# suites:
+#   - name: kt_suite
+
+
+# ---
+# driver:
+#   name: terraform
+#   variable_files:
+#     - testing.tfvars
+# provisioner:
+#   name: terraform
+# platforms:
+#   - name: terraform
+# transport:
+#   name: ssh
+#   ssh_key: ~/.aws/sc-test.pem
+# verifier:
+#   name: terraform
+# #  format: doc
+#   groups:
+#     - name: default
+#       controls:
+#         - operating_system
+#       hostnames: public_dns
+#       username: ubuntu
+# suites:
+#   - name: default
+
+#root_module_directory: "examples/test_fixture"
+
+---
+driver:
+  name: "terraform"
+  variable_files:
+    - terraform.tfvars
+
+provisioner:
+  name: "terraform"
+
+platforms:
+  - name: "aws"
+
+verifier:
+  name: "awspec"
+
+suites:
+  - name: "default"
+    verifier:
+      name: "awspec"
+      patterns:
+      - "test/integration/default/controls/test_setup.rb"
