@@ -37,6 +37,6 @@ variable "username" {
   description = "User name"
 }
 
-variable "password" {
+variable "db_password" {
   description = "password, provide through ENV variables"
 }

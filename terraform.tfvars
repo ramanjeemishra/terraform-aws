@@ -1,4 +1,4 @@
-region = "us-east-1"
+region = "eu-west-1"
 
 environment = "dev"
 
@@ -6,7 +6,7 @@ name = "SC-Test"
 
 vpc_cidr = "192.168.0.0/16"
 
-azs = ["us-east-1a", "us-east-1b"]
+azs = ["eu-west-1a", "eu-west-1b"]
 
 tags {
   Name        = "SC-Test"

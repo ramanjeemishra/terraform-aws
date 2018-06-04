@@ -7,7 +7,7 @@ resource "aws_db_instance" "rds" {
   instance_class         = "${var.instance_class}"
   name                   = "${var.db_name}"
   username               = "${var.username}"
-  password               = "${var.password}"
+  password               = "${var.db_password}"
   vpc_security_group_ids = ["${aws_security_group.database.id}"]
   db_subnet_group_name   = "${aws_db_subnet_group.database.id}"
   skip_final_snapshot    = true
