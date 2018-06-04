@@ -24,7 +24,7 @@ This project create following Infrastructure components in provided regions
 - ``export TF_VAR_db_password=<<DB_PASSWORD>>``
 #### Run following commands
 <b>Variables will be read from <code>terraform.tfvars</code>
-- ''terraform init``
+- ``terraform init``
 - ``terraform plan`` or ``terraform plan -var-file terraform.tfvars``
 - ``terraform apply`` or ``terraform apply -var-file terraform.tfvars``
   - <i>Please make sure database password is provided as Environment variable</i>
